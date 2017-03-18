@@ -1,0 +1,94 @@
+.posts
+	width: 100%
+	float: left
+	list-style: none
+	padding: 0
+	margin: 0
+	.post
+		width: 100%
+		float: left
+		position: relative
+		margin-bottom: 20px
+		border-bottom: 1px solid rgba(#000, 0.1) 
+		padding-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+		.naslov
+			width: 100%
+			float: left
+			h3
+				width: 100%
+				float: left
+				font-size: 1.4em 
+				a
+					text-decoration: none
+					color: rgba(#000, 0.8) 
+					font-weight: 800 
+		.slika
+			width: 80%
+			float: left
+			position: relative
+			z-index: 5
+			img
+				width: 100%
+				float: left
+		.bottom-bar
+			position: absolute
+			bottom: 20px
+			left: 0
+			width: 100%
+			height: 50px
+			background-color: #fff
+			z-index: 10  
+			ul
+				width: 80%
+				height: 100%
+				float: left
+				list-style: none
+				position: relative
+				padding: 10px 0px 
+				li
+					float: left
+					position: relative
+					cursor: pointer
+					+transition(100ms all ease-in-out)
+					border-radius: 2px 
+					&.like, &.dislike
+						width: 100px
+						height: 30px
+						i
+							margin-right: 5px
+					&.like
+						background-color: #45CC74
+						margin-right: 10px
+						&:hover
+							background-color: darken(#45CC74, 5%) 
+						&:active
+							background-color: darken(#45CC74, 10%) 
+					&.dislike
+						background-color: $main-color
+						&:hover
+							background-color: darken($main-color, 3%) 
+						&:active
+							background-color: darken($main-color, 10%) 
+					&.share
+						background-color: #3b5998
+						height: 30px
+						text-align: center
+						padding: 5px 20px  
+						font-size: 0.8em 
+						color: #fff 
+						float: right
+						i
+							margin-right: 5px
+					a
+						position: absolute
+						width: 100%
+						text-align: center
+						top: 50%
+						left: 50%
+						+transform(translate(-50%, -50%))
+						color: #FFF
+						text-decoration: none
+						font-size: 0.8em
+						font-weight: 600  

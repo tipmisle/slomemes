@@ -1,0 +1,95 @@
+body
+	background-color: #fff
+	margin: 0
+	padding: 0
+	font-family: 'Open Sans' !important 
+	box-sizing: border-box
+	*, *:before, *:after
+	  padding: 0
+	  margin: 0	
+	  font-family: 'Open Sans' !important 
+	  box-sizing: border-box
+	a
+		+transition(100ms all ease-in-out)
+
+.container
+	width: 1080px
+	margin: 0 auto
+
+.box
+	background-color: #FFF 
+	box-shadow: 0 1px 5px 0px rgba(#000, 0.1) 
+
+.section
+	width: 100%
+	float: left
+	padding: 10px 15px
+	header
+		width: 100%
+		float: left
+		border-bottom: 1px solid rgba(#000, 0.1)
+		padding-bottom: 5px
+		margin-bottom: 10px
+		font-weight: 500
+		font-size: 1.1em
+	.content
+		width: 100%
+		float: left
+		form
+			width: 100%
+			label
+				width: 100%
+				float: left
+				margin-top: 15px
+				&:first-of-type
+					margin-top: 0
+				p
+					width: 100%
+					float: left
+					font-size: 0.9em
+					margin-bottom: 4px
+					font-weight: 800  
+			button
+				margin-top: 10px
+
+#app
+	+grid-container
+
+main
+	margin-top: 70px
+	+grid-column(8)
+
+aside
+	margin-top: 70px
+	position: relative
+	+grid-column(4)
+
+
+// ESSENTIALS
+form
+	input, select, textarea
+		width: 100%
+		float: left
+		padding: 9px
+		outline-style: none
+		border: 1px solid rgba(#000, 0.15) 
+		margin-bottom: 5px
+		+transition(100ms all ease-in-out)
+		&:hover
+			border: 1px solid rgba(#000, 0.2)
+		&:active
+			border: 1px solid rgba(#000, 0.25)
+		&:focus
+			border: 1px solid rgba(#000, 0.3)
+
+.btn
+	border: 1px solid rgba(#000, 0.15)
+	padding: 6px 15px 
+	font-size: 0.7em 
+	+transition(100ms all ease-in-out)
+	cursor: pointer
+	&.btn-red
+		background-color: $main-color
+		color: #FFF  
+		&:hover
+			background-color: darken($main-color, 3%) 
